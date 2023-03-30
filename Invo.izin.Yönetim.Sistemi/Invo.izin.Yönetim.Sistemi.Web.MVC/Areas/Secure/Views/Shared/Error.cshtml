@@ -1,0 +1,59 @@
+﻿@using Invo.izin.Yönetim.Sistemi.Web.MVC.Areas.Secure.Models
+
+
+@{
+    // Layout = "_ErrorLayout";
+    ViewBag.Title = "Sunucu Hatası (500)"; // Veritabanı Hatası
+
+    ErrorViewModel errorModel = ViewData["ErrorViewModel"] as ErrorViewModel;
+}
+
+ @{
+    Layout = "_Layout";
+}
+
+<section class="content-header">
+    <div class="container-fluid">
+        <div class="row mb-2">
+            <div class="col-sm-6">
+                <h1>Bir Hata Oluştu</h1>
+            </div>
+            <div class="col-sm-6">
+                <ol class="breadcrumb float-sm-right">
+                    <li class="breadcrumb-item"><a href="#"><i class="fas fa-home" title="Anasayfa"></i></a></li>
+     
+                </ol>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="row">
+    @if (errorModel.Detail != null)
+{
+    <code>@errorModel.Detail</code>
+}
+
+
+<div class="card">
+    <div class="card-header">
+        <h1 class="card-title"><i class="fas fa-exclamation-triangle text-danger"></i></h1>
+        <div class="card-tools">
+            <button type="button" class="btn btn-danger">Raporla</button>
+
+        </div>
+    </div>
+    <div class="card-body">
+        <pre class="pull-left">@errorModel.Message</pre>
+    </div>
+
+    <div class="card-footer">
+        <a asp-controller="Home" asp-action="Index" class="text-warning">
+            <i class="fas fa-arrow-left mr-1"></i>
+           Geri Dönmek İçin Tıklayınız.
+        </a>
+    </div>
+</div>
+
+</div>
+ 

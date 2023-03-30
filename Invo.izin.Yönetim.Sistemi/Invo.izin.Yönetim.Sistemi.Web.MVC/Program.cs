@@ -1,5 +1,8 @@
-var builder = WebApplication.CreateBuilder(args);
+using Invo.izin.Yönetim.Sistemi.Web.MVC.Middleware;
 
+var builder = WebApplication.CreateBuilder(args);
+builder.Services.AddMvcCore();
+builder.Services.AddRazorPages();
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 
@@ -9,7 +12,6 @@ var app = builder.Build();
 if (!app.Environment.IsDevelopment())
 {
     app.UseExceptionHandler("/Home/Error");
-    // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
     app.UseHsts();
 }
 
@@ -20,8 +22,32 @@ app.UseRouting();
 
 app.UseAuthorization();
 
-app.MapControllerRoute(
-    name: "default",
-    pattern: "{controller=Home}/{action=Index}/{id?}");
+#region CUSTOM MIDDLEWARE - > EXCEPTION
+app.UseMiddleware<ExceptionMiddleware>();
+#endregion
+
+
+app.Use(async (context, next) =>
+{
+    await next();
+    if (context.Response.StatusCode == 404)
+    {
+        context.Request.Path = "/Home";
+        await next();
+    }
+});
+
+app.UseEndpoints(endpoints =>
+{
+
+
+    endpoints.MapAreaControllerRoute(
+        name: "Secure",
+        areaName: "Secure",
+        pattern: "{areas=Secure}/{controller=Home}/{action=Index}/{id?}"
+    );
+
+    endpoints.MapDefaultControllerRoute();
+});
 
 app.Run();
