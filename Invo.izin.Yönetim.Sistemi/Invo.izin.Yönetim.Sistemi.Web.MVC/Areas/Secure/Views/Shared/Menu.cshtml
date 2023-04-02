@@ -13,7 +13,8 @@
         <nav class="mt-2">
             <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
                 <li class="nav-item">
-                    <a asp-controller="Home" asp-action="Index" class="nav-link">
+
+                    <a asp-area="secure" asp-controller="Home" asp-action="index" class="nav-link">
 
                         <i class="nav-icon fas fa-address-card"></i>
                         <p>
@@ -23,263 +24,27 @@
                     </a>
                     </li>
                 <li class="nav-item">
-                    <a href="#" class="nav-link">
+
+                    <a asp-area="secure" asp-controller="Leave" asp-action="index" class="nav-link">
 
                         <i class="nav-icon fas fa-address-card"></i>
                         <p>
-                            Firma Yönetimi
-                            <i class="fas fa-angle-left right"></i>
+                            İzin Yönetimi
+
                         </p>
                     </a>
-                    <ul class="nav nav-treeview">
-                        <li class="nav-item">
-                            
-                           <a asp-controller="PersonelCompany" asp-action="Index" class="nav-link">
-
-                                <i class="nav-icon far fa-circle text-info"></i>
-                                <p>Bireysel Firma Listesi</p>
-                            </a>
-                            <a asp-controller="CorporateCompany" asp-action="Index" class="nav-link">
-
-                                <i class="nav-icon far fa-circle text-info"></i>
-                                <p>Kurumsal Firma Listesi</p>
-                            </a>
-                        </li>
-                      
-
-                    </ul>
                 </li>
-                
                 <li class="nav-item">
-                    <a href="#" class="nav-link">
+
+                    <a asp-area="secure" asp-controller="Employee" asp-action="index" class="nav-link">
 
                         <i class="nav-icon fas fa-address-card"></i>
                         <p>
-                            Müşteri Yönetimi
-                            <i class="fas fa-angle-left right"></i>
-                        </p>
-                    </a>
-                    <ul class="nav nav-treeview">
-                        <li class="nav-item">
-                            <a href="Secure/Customer/Index" class="nav-link">
-                                <i class="nav-icon far fa-circle text-info"></i>
-                                <p>Müşteri Listesi</p>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="#" class="nav-link">
-                                <i class="nav-icon far fa-circle text-info"></i>
-                                <p>Kontak Listesi</p>
-                            </a>
-                        </li>
-
-                    </ul>
-                </li>
-
-                <li class="nav-item">
-                    <a href="#" class="nav-link">
-                      <i class="nav-icon far fa-calendar-alt"></i>
-                        <p> Ajanda </p>
-                    </a>
-                </li>
-
-                <li class="nav-item">
-                    <a href="#" class="nav-link">
-
-                        <i class="nav-icon far fa-folder-open"></i>
-                        <p>
-                            Dosya Yönetimi
+                            Çalışan Yönetimi
 
                         </p>
                     </a>
                 </li>
-
-                <li class="nav-item">
-                    <a href="#" class="nav-link">
-                        <i class="nav-icon fab fa-product-hunt"></i>
-
-                        <p>
-                            Ürün Yönetimi
-                            <i class="fas fa-angle-left right"></i>
-                        </p>
-                    </a>
-                    <ul class="nav nav-treeview">
-                        <li class="nav-item">
-                            <a href="#" class="nav-link">
-                                <i class="nav-icon far fa-circle text-info"></i>
-                                <p>Ürün Listesi</p>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="#" class="nav-link">
-                                <i class="nav-icon far fa-circle text-info"></i>
-                                <p>Stok Yönetimi</p>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="#" class="nav-link">
-                                <i class="nav-icon far fa-circle text-info"></i>
-                                <p>Kategori Yönetimi</p>
-                            </a>
-                        </li>
-                    </ul>
-                </li>
-
-                <li class="nav-item">
-                    <a href="#" class="nav-link">
-                        <i class="nav-icon fas fa-phone-square-alt"></i>
-                        <p>
-                            Call Center
-
-                        </p>
-                    </a>
-                </li>
-
-                <li class="nav-item">
-                    <a href="#" class="nav-link">
-
-                        <i class="nav-icon fas fa-handshake"></i>
-                        <p>
-                            Anlaşma Yönetimi
-
-                        </p>
-                    </a>
-                </li>
-
-                <li class="nav-item">
-                    <a href="#" class="nav-link">
-                        <i class="nav-icon fas fa-cart-arrow-down"></i>
-
-                        <p>
-                            Satış Yönetimi
-                            <i class="fas fa-angle-left right"></i>
-                        </p>
-                    </a>
-                    <ul class="nav nav-treeview">
-                        <li class="nav-item">
-                            <a href="#" class="nav-link">
-                                <i class="nav-icon far fa-circle text-info"></i>
-                                <p>Fırsatlar</p>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="#" class="nav-link">
-                                <i class="nav-icon far fa-circle text-info"></i>
-                                <p>Fatura</p>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="#" class="nav-link">
-                                <i class="nav-icon far fa-circle text-info"></i>
-                                <p>Teklif Yönetimi</p>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="#" class="nav-link">
-                                <i class="nav-icon far fa-circle text-info"></i>
-                                <p>Satış Takımları</p>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="#" class="nav-link">
-                                <i class="nav-icon far fa-circle text-info"></i>
-                                <p>Satış Bölgeleri</p>
-                            </a>
-                        </li>
-                    </ul>
-                </li>
-
-                <li class="nav-item">
-                    <a href="#" class="nav-link">
-                        <i class="nav-icon fas fa-bullseye"></i>
-                        <p>
-                            Pazarlama Yönetimi
-
-                        </p>
-                    </a>
-                </li>
-
-                <li class="nav-item">
-                    <a href="#" class="nav-link">
-                        <i class="nav-icon fas fa-pen-nib"></i>
-                        <p>
-                            İçerik Yönetimi
-                            <i class="fas fa-angle-left right"></i>
-                        </p>
-                    </a>
-                    <ul class="nav nav-treeview">
-                        <li class="nav-item">
-                            <a href="#" class="nav-link">
-                                <i class="nav-icon far fa-circle text-info"></i>
-                                <p>Dökümanlar</p>
-                            </a>
-                        </li>
-
-
-
-                    </ul>
-                </li>
-                <li class="nav-item">
-                    <a href="#" class="nav-link">
-                        <i class="nav-icon fas fa-project-diagram"></i>
-                        <p>
-                            Proje Yönetimi
-                            <i class="fas fa-angle-left right"></i>
-                        </p>
-                    </a>
-                    <ul class="nav nav-treeview">
-                        <li class="nav-item">
-                            <a href="#" class="nav-link">
-                                <i class="nav-icon far fa-circle text-info"></i>
-                                <p>Proje Listesi</p>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="#" class="nav-link">
-                                <i class="nav-icon far fa-circle text-info"></i>
-                                <p>Görev Listesi</p>
-                            </a>
-                        </li>
-
-                    </ul>
-                </li>
-
-                <li class="nav-item">
-                    <a href="#" class="nav-link">
-                        <i class="nav-icon fas fa-chart-bar"></i>
-                        <p>
-                            İnsan Kaynakları
-                            <i class="fas fa-angle-left right"></i>
-                        </p>
-                    </a>
-                    <ul class="nav nav-treeview">
-                        <li class="nav-item">
-                            <a href="#" class="nav-link">
-                                <i class="nav-icon far fa-circle text-info"></i>
-                                <p>Çalışan Listesi</p>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="#" class="nav-link">
-                                <i class="nav-icon far fa-circle text-info"></i>
-                                <p>Performans</p>
-                            </a>
-                        </li>
-
-                    </ul>
-                </li>
-
-                <li class="nav-item">
-                    <a href="#" class="nav-link">
-                        <i class="nav-icon fas fa-envelope"></i>
-                        <p>
-                            Şikayet Ve Talep
-
-                        </p>
-                    </a>
-                </li>
-
-     
 
                   <li class="nav-item">
                     <a href="#" class="nav-link">
