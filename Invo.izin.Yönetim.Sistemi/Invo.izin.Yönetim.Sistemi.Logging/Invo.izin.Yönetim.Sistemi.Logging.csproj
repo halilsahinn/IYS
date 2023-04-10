@@ -15,4 +15,8 @@
     <ProjectReference Include="..\Invo.izin.Yönetim.Sistemi.Application\Invo.izin.Yönetim.Sistemi.Application.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="SeriLog\" />
+  </ItemGroup>
+
 </Project>

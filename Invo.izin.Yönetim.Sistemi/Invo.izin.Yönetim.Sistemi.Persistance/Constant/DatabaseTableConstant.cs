@@ -9,7 +9,7 @@
         public const string LeaveType = "LeaveType";
         public const string LeavePermissionLevel = "LeavePermissionLevel";
         public const string LeaveRequest = " LeaveRequest";
-        public const string BranchOfficeName = " BranchOfficeName";
+        public const string BranchOfficeName = " BranchOffice";
         public const string DepartmentOfHead = " DepartmentOfHead";
         
 

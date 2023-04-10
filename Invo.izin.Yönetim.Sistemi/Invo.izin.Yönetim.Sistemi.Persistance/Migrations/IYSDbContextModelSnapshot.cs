@@ -67,7 +67,7 @@ namespace Invo.izin.Yönetim.Sistemi.Persistance.Migrations
                         new
                         {
                             Id = (byte)1,
-                            CreatedDate = new DateTime(2023, 4, 2, 4, 42, 41, 541, DateTimeKind.Local).AddTicks(16),
+                            CreatedDate = new DateTime(2023, 4, 9, 12, 55, 3, 664, DateTimeKind.Local).AddTicks(7452),
                             DepartmentName = "Bilgi İşlem",
                             Description = "",
                             IsActive = true
@@ -75,7 +75,7 @@ namespace Invo.izin.Yönetim.Sistemi.Persistance.Migrations
                         new
                         {
                             Id = (byte)2,
-                            CreatedDate = new DateTime(2023, 4, 2, 4, 42, 41, 541, DateTimeKind.Local).AddTicks(19),
+                            CreatedDate = new DateTime(2023, 4, 9, 12, 55, 3, 664, DateTimeKind.Local).AddTicks(7467),
                             DepartmentName = "Finans",
                             Description = "",
                             IsActive = true
@@ -83,7 +83,7 @@ namespace Invo.izin.Yönetim.Sistemi.Persistance.Migrations
                         new
                         {
                             Id = (byte)3,
-                            CreatedDate = new DateTime(2023, 4, 2, 4, 42, 41, 541, DateTimeKind.Local).AddTicks(20),
+                            CreatedDate = new DateTime(2023, 4, 9, 12, 55, 3, 664, DateTimeKind.Local).AddTicks(7468),
                             DepartmentName = "Muhasebe",
                             Description = "",
                             IsActive = true
@@ -91,7 +91,7 @@ namespace Invo.izin.Yönetim.Sistemi.Persistance.Migrations
                         new
                         {
                             Id = (byte)4,
-                            CreatedDate = new DateTime(2023, 4, 2, 4, 42, 41, 541, DateTimeKind.Local).AddTicks(21),
+                            CreatedDate = new DateTime(2023, 4, 9, 12, 55, 3, 664, DateTimeKind.Local).AddTicks(7468),
                             DepartmentName = "Satış / Pazarlama",
                             Description = "",
                             IsActive = true
@@ -99,7 +99,7 @@ namespace Invo.izin.Yönetim.Sistemi.Persistance.Migrations
                         new
                         {
                             Id = (byte)5,
-                            CreatedDate = new DateTime(2023, 4, 2, 4, 42, 41, 541, DateTimeKind.Local).AddTicks(21),
+                            CreatedDate = new DateTime(2023, 4, 9, 12, 55, 3, 664, DateTimeKind.Local).AddTicks(7470),
                             DepartmentName = "Sevkiyat",
                             Description = "",
                             IsActive = true
@@ -107,7 +107,7 @@ namespace Invo.izin.Yönetim.Sistemi.Persistance.Migrations
                         new
                         {
                             Id = (byte)6,
-                            CreatedDate = new DateTime(2023, 4, 2, 4, 42, 41, 541, DateTimeKind.Local).AddTicks(22),
+                            CreatedDate = new DateTime(2023, 4, 9, 12, 55, 3, 664, DateTimeKind.Local).AddTicks(7471),
                             DepartmentName = "Üretim",
                             Description = "",
                             IsActive = true
@@ -115,7 +115,7 @@ namespace Invo.izin.Yönetim.Sistemi.Persistance.Migrations
                         new
                         {
                             Id = (byte)7,
-                            CreatedDate = new DateTime(2023, 4, 2, 4, 42, 41, 541, DateTimeKind.Local).AddTicks(22),
+                            CreatedDate = new DateTime(2023, 4, 9, 12, 55, 3, 664, DateTimeKind.Local).AddTicks(7471),
                             DepartmentName = "Hukuk",
                             Description = "",
                             IsActive = true
@@ -123,7 +123,7 @@ namespace Invo.izin.Yönetim.Sistemi.Persistance.Migrations
                         new
                         {
                             Id = (byte)8,
-                            CreatedDate = new DateTime(2023, 4, 2, 4, 42, 41, 541, DateTimeKind.Local).AddTicks(23),
+                            CreatedDate = new DateTime(2023, 4, 9, 12, 55, 3, 664, DateTimeKind.Local).AddTicks(7472),
                             DepartmentName = "Halkla İlişkiler",
                             Description = "",
                             IsActive = true
@@ -131,7 +131,7 @@ namespace Invo.izin.Yönetim.Sistemi.Persistance.Migrations
                         new
                         {
                             Id = (byte)9,
-                            CreatedDate = new DateTime(2023, 4, 2, 4, 42, 41, 541, DateTimeKind.Local).AddTicks(24),
+                            CreatedDate = new DateTime(2023, 4, 9, 12, 55, 3, 664, DateTimeKind.Local).AddTicks(7473),
                             DepartmentName = "İnsan Kaynakları",
                             Description = "",
                             IsActive = true
@@ -139,78 +139,10 @@ namespace Invo.izin.Yönetim.Sistemi.Persistance.Migrations
                         new
                         {
                             Id = (byte)10,
-                            CreatedDate = new DateTime(2023, 4, 2, 4, 42, 41, 541, DateTimeKind.Local).AddTicks(24),
+                            CreatedDate = new DateTime(2023, 4, 9, 12, 55, 3, 664, DateTimeKind.Local).AddTicks(7474),
                             DepartmentName = "Ar-Ge",
                             Description = "",
                             IsActive = true
-                        });
-                });
-
-            modelBuilder.Entity("Invo.izin.Yönetim.Sistemi.Domain.Employee.DepartmentOfHeadEntity", b =>
-                {
-                    b.Property<byte>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("tinyint")
-                        .HasColumnOrder(1);
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<byte>("Id"));
-
-                    b.Property<DateTime?>("CreatedDate")
-                        .HasColumnType("datetime2")
-                        .HasColumnName("CreatedDate")
-                        .HasColumnOrder(5);
-
-                    b.Property<byte>("DepartmentId")
-                        .HasColumnType("tinyint")
-                        .HasColumnName("DepartmentId")
-                        .HasColumnOrder(3);
-
-                    b.Property<string>("Description")
-                        .HasMaxLength(500)
-                        .HasColumnType("nvarchar(500)")
-                        .HasColumnName("Description")
-                        .HasColumnOrder(7);
-
-                    b.Property<int>("EmployeeId")
-                        .HasColumnType("int")
-                        .HasColumnName("EmployeeId")
-                        .HasColumnOrder(2);
-
-                    b.Property<bool>("IsActive")
-                        .HasColumnType("bit")
-                        .HasColumnName("IsActive")
-                        .HasColumnOrder(8);
-
-                    b.Property<byte>("LeavePermissionLevelId")
-                        .HasColumnType("tinyint")
-                        .HasColumnName("LeavePermissionLevelId")
-                        .HasColumnOrder(4);
-
-                    b.Property<DateTime?>("UpdatedDate")
-                        .HasColumnType("datetime2")
-                        .HasColumnName("UpatedDate")
-                        .HasColumnOrder(6);
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("DepartmentId");
-
-                    b.HasIndex("EmployeeId")
-                        .IsUnique();
-
-                    b.HasIndex("LeavePermissionLevelId");
-
-                    b.ToTable(" DepartmentOfHead", "Hr");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = (byte)1,
-                            CreatedDate = new DateTime(2023, 4, 2, 4, 42, 41, 540, DateTimeKind.Local).AddTicks(9913),
-                            DepartmentId = (byte)1,
-                            EmployeeId = 1,
-                            IsActive = true,
-                            LeavePermissionLevelId = (byte)1
                         });
                 });
 
@@ -219,6 +151,7 @@ namespace Invo.izin.Yönetim.Sistemi.Persistance.Migrations
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int")
+                        .HasColumnName("EmployeeId")
                         .HasColumnOrder(1);
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
@@ -230,6 +163,10 @@ namespace Invo.izin.Yönetim.Sistemi.Persistance.Migrations
                         .HasColumnType("datetime2")
                         .HasColumnName("CreatedDate")
                         .HasColumnOrder(4);
+
+                    b.Property<byte?>("DepartmentId")
+                        .IsRequired()
+                        .HasColumnType("tinyint");
 
                     b.Property<string>("Description")
                         .HasMaxLength(500)
@@ -251,15 +188,19 @@ namespace Invo.izin.Yönetim.Sistemi.Persistance.Migrations
                         .HasColumnName("EmployeeSurName")
                         .HasColumnOrder(3);
 
-                    b.Property<int?>("HeadId")
-                        .HasColumnType("int");
-
                     b.Property<bool>("IsActive")
                         .HasColumnType("bit")
                         .HasColumnName("IsActive")
                         .HasColumnOrder(7);
 
+                    b.Property<bool>("IsHead")
+                        .HasColumnType("bit");
+
                     b.Property<byte?>("LeavePermissionLevelId")
+                        .HasColumnType("tinyint");
+
+                    b.Property<byte?>("TitleId")
+                        .IsRequired()
                         .HasColumnType("tinyint");
 
                     b.Property<DateTime?>("UpdatedDate")
@@ -267,14 +208,18 @@ namespace Invo.izin.Yönetim.Sistemi.Persistance.Migrations
                         .HasColumnName("UpatedDate")
                         .HasColumnOrder(5);
 
-                    b.Property<int?>("UserId")
-                        .HasColumnType("int");
+                    b.Property<string>("UserId")
+                        .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
 
                     b.HasIndex("BranchOfficeId");
 
+                    b.HasIndex("DepartmentId");
+
                     b.HasIndex("LeavePermissionLevelId");
+
+                    b.HasIndex("TitleId");
 
                     b.ToTable("Employee", "Hr");
 
@@ -283,11 +228,29 @@ namespace Invo.izin.Yönetim.Sistemi.Persistance.Migrations
                         {
                             Id = 1,
                             BranchOfficeId = (byte)1,
-                            CreatedDate = new DateTime(2023, 4, 2, 4, 42, 41, 541, DateTimeKind.Local).AddTicks(74),
+                            CreatedDate = new DateTime(2023, 4, 9, 12, 55, 3, 664, DateTimeKind.Local).AddTicks(8474),
+                            DepartmentId = (byte)1,
                             EmployeeName = "Halil",
                             EmployeeSurName = "ŞAHİN",
                             IsActive = true,
-                            LeavePermissionLevelId = (byte)1
+                            IsHead = true,
+                            LeavePermissionLevelId = (byte)1,
+                            TitleId = (byte)1,
+                            UserId = "8e445865-a24d-4543-a6c6-9443d048cdb9"
+                        },
+                        new
+                        {
+                            Id = 2,
+                            BranchOfficeId = (byte)2,
+                            CreatedDate = new DateTime(2023, 4, 9, 12, 55, 3, 664, DateTimeKind.Local).AddTicks(8479),
+                            DepartmentId = (byte)2,
+                            EmployeeName = "Ali",
+                            EmployeeSurName = "ŞAHİN",
+                            IsActive = true,
+                            IsHead = false,
+                            LeavePermissionLevelId = (byte)2,
+                            TitleId = (byte)2,
+                            UserId = "9e224968-33e4-4652-b7b7-8574d048cdb9"
                         });
                 });
 
@@ -387,28 +350,28 @@ namespace Invo.izin.Yönetim.Sistemi.Persistance.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable(" BranchOfficeName", "Hr");
+                    b.ToTable(" BranchOffice", "Hr");
 
                     b.HasData(
                         new
                         {
                             Id = (byte)1,
                             BranchOfficeName = "İstanbul",
-                            CreatedDate = new DateTime(2023, 4, 2, 4, 42, 41, 540, DateTimeKind.Local).AddTicks(9812),
+                            CreatedDate = new DateTime(2023, 4, 9, 12, 55, 3, 664, DateTimeKind.Local).AddTicks(7663),
                             IsActive = true
                         },
                         new
                         {
                             Id = (byte)2,
                             BranchOfficeName = "Ankara",
-                            CreatedDate = new DateTime(2023, 4, 2, 4, 42, 41, 540, DateTimeKind.Local).AddTicks(9813),
+                            CreatedDate = new DateTime(2023, 4, 9, 12, 55, 3, 664, DateTimeKind.Local).AddTicks(7665),
                             IsActive = true
                         },
                         new
                         {
                             Id = (byte)3,
                             BranchOfficeName = "İzmir",
-                            CreatedDate = new DateTime(2023, 4, 2, 4, 42, 41, 540, DateTimeKind.Local).AddTicks(9814),
+                            CreatedDate = new DateTime(2023, 4, 9, 12, 55, 3, 664, DateTimeKind.Local).AddTicks(7665),
                             IsActive = true
                         });
                 });
@@ -438,11 +401,11 @@ namespace Invo.izin.Yönetim.Sistemi.Persistance.Migrations
                         .HasColumnName("IsActive")
                         .HasColumnOrder(6);
 
-                    b.Property<string>("Title")
+                    b.Property<string>("TitleName")
                         .IsRequired()
                         .HasMaxLength(50)
                         .HasColumnType("nvarchar(50)")
-                        .HasColumnName("Title")
+                        .HasColumnName("TitleName")
                         .HasColumnOrder(2);
 
                     b.Property<DateTime?>("UpdatedDate")
@@ -458,44 +421,44 @@ namespace Invo.izin.Yönetim.Sistemi.Persistance.Migrations
                         new
                         {
                             Id = (byte)1,
-                            CreatedDate = new DateTime(2023, 4, 2, 4, 42, 41, 540, DateTimeKind.Local).AddTicks(9963),
+                            CreatedDate = new DateTime(2023, 4, 9, 12, 55, 3, 664, DateTimeKind.Local).AddTicks(8413),
                             IsActive = true,
-                            Title = "Müdür"
+                            TitleName = "Müdür"
                         },
                         new
                         {
                             Id = (byte)2,
-                            CreatedDate = new DateTime(2023, 4, 2, 4, 42, 41, 540, DateTimeKind.Local).AddTicks(9964),
+                            CreatedDate = new DateTime(2023, 4, 9, 12, 55, 3, 664, DateTimeKind.Local).AddTicks(8416),
                             IsActive = true,
-                            Title = "Şef"
+                            TitleName = "Şef"
                         },
                         new
                         {
                             Id = (byte)3,
-                            CreatedDate = new DateTime(2023, 4, 2, 4, 42, 41, 540, DateTimeKind.Local).AddTicks(9965),
+                            CreatedDate = new DateTime(2023, 4, 9, 12, 55, 3, 664, DateTimeKind.Local).AddTicks(8417),
                             IsActive = true,
-                            Title = "Uzman"
+                            TitleName = "Uzman"
                         },
                         new
                         {
                             Id = (byte)4,
-                            CreatedDate = new DateTime(2023, 4, 2, 4, 42, 41, 540, DateTimeKind.Local).AddTicks(9966),
+                            CreatedDate = new DateTime(2023, 4, 9, 12, 55, 3, 664, DateTimeKind.Local).AddTicks(8417),
                             IsActive = true,
-                            Title = "Stajyer"
+                            TitleName = "Stajyer"
                         },
                         new
                         {
                             Id = (byte)5,
-                            CreatedDate = new DateTime(2023, 4, 2, 4, 42, 41, 540, DateTimeKind.Local).AddTicks(9966),
+                            CreatedDate = new DateTime(2023, 4, 9, 12, 55, 3, 664, DateTimeKind.Local).AddTicks(8418),
                             IsActive = true,
-                            Title = "Genel Müdür"
+                            TitleName = "Genel Müdür"
                         },
                         new
                         {
                             Id = (byte)6,
-                            CreatedDate = new DateTime(2023, 4, 2, 4, 42, 41, 540, DateTimeKind.Local).AddTicks(9967),
+                            CreatedDate = new DateTime(2023, 4, 9, 12, 55, 3, 664, DateTimeKind.Local).AddTicks(8419),
                             IsActive = true,
-                            Title = "CEO"
+                            TitleName = "CEO"
                         });
                 });
 
@@ -544,21 +507,21 @@ namespace Invo.izin.Yönetim.Sistemi.Persistance.Migrations
                         new
                         {
                             Id = (byte)1,
-                            CreatedDate = new DateTime(2023, 4, 2, 4, 42, 41, 540, DateTimeKind.Local).AddTicks(9868),
+                            CreatedDate = new DateTime(2023, 4, 9, 12, 55, 3, 664, DateTimeKind.Local).AddTicks(7717),
                             IsActive = true,
                             Level = "Birinci Seviye"
                         },
                         new
                         {
                             Id = (byte)2,
-                            CreatedDate = new DateTime(2023, 4, 2, 4, 42, 41, 540, DateTimeKind.Local).AddTicks(9869),
+                            CreatedDate = new DateTime(2023, 4, 9, 12, 55, 3, 664, DateTimeKind.Local).AddTicks(7718),
                             IsActive = true,
                             Level = "İkinci Seviye"
                         },
                         new
                         {
                             Id = (byte)3,
-                            CreatedDate = new DateTime(2023, 4, 2, 4, 42, 41, 540, DateTimeKind.Local).AddTicks(9869),
+                            CreatedDate = new DateTime(2023, 4, 9, 12, 55, 3, 664, DateTimeKind.Local).AddTicks(7719),
                             IsActive = true,
                             Level = "Üçüncü Seviye"
                         });
@@ -609,135 +572,108 @@ namespace Invo.izin.Yönetim.Sistemi.Persistance.Migrations
                         new
                         {
                             Id = (byte)1,
-                            CreatedDate = new DateTime(2023, 4, 2, 4, 42, 41, 540, DateTimeKind.Local).AddTicks(9643),
+                            CreatedDate = new DateTime(2023, 4, 9, 12, 55, 3, 664, DateTimeKind.Local).AddTicks(7598),
                             IsActive = true,
                             LeaveTypeName = "Yıllık İzin"
                         },
                         new
                         {
                             Id = (byte)2,
-                            CreatedDate = new DateTime(2023, 4, 2, 4, 42, 41, 540, DateTimeKind.Local).AddTicks(9656),
+                            CreatedDate = new DateTime(2023, 4, 9, 12, 55, 3, 664, DateTimeKind.Local).AddTicks(7599),
                             IsActive = true,
                             LeaveTypeName = "Süt İzni"
                         },
                         new
                         {
                             Id = (byte)3,
-                            CreatedDate = new DateTime(2023, 4, 2, 4, 42, 41, 540, DateTimeKind.Local).AddTicks(9657),
+                            CreatedDate = new DateTime(2023, 4, 9, 12, 55, 3, 664, DateTimeKind.Local).AddTicks(7600),
                             IsActive = true,
                             LeaveTypeName = "Mazeret İzni"
                         },
                         new
                         {
                             Id = (byte)4,
-                            CreatedDate = new DateTime(2023, 4, 2, 4, 42, 41, 540, DateTimeKind.Local).AddTicks(9657),
+                            CreatedDate = new DateTime(2023, 4, 9, 12, 55, 3, 664, DateTimeKind.Local).AddTicks(7600),
                             IsActive = true,
                             LeaveTypeName = "Doğum Sonrası İzin"
                         },
                         new
                         {
                             Id = (byte)5,
-                            CreatedDate = new DateTime(2023, 4, 2, 4, 42, 41, 540, DateTimeKind.Local).AddTicks(9658),
+                            CreatedDate = new DateTime(2023, 4, 9, 12, 55, 3, 664, DateTimeKind.Local).AddTicks(7601),
                             IsActive = true,
                             LeaveTypeName = "Evilik İzni"
                         },
                         new
                         {
                             Id = (byte)6,
-                            CreatedDate = new DateTime(2023, 4, 2, 4, 42, 41, 540, DateTimeKind.Local).AddTicks(9659),
+                            CreatedDate = new DateTime(2023, 4, 9, 12, 55, 3, 664, DateTimeKind.Local).AddTicks(7601),
                             IsActive = true,
                             LeaveTypeName = "Hastalık İzni"
                         },
                         new
                         {
                             Id = (byte)7,
-                            CreatedDate = new DateTime(2023, 4, 2, 4, 42, 41, 540, DateTimeKind.Local).AddTicks(9659),
+                            CreatedDate = new DateTime(2023, 4, 9, 12, 55, 3, 664, DateTimeKind.Local).AddTicks(7602),
                             IsActive = true,
                             LeaveTypeName = "Askerlik"
                         },
                         new
                         {
-                            Id = (byte)9,
-                            CreatedDate = new DateTime(2023, 4, 2, 4, 42, 41, 540, DateTimeKind.Local).AddTicks(9660),
+                            Id = (byte)8,
+                            CreatedDate = new DateTime(2023, 4, 9, 12, 55, 3, 664, DateTimeKind.Local).AddTicks(7603),
                             IsActive = true,
                             LeaveTypeName = "Ücretsiz İzin"
                         },
                         new
                         {
-                            Id = (byte)10,
-                            CreatedDate = new DateTime(2023, 4, 2, 4, 42, 41, 540, DateTimeKind.Local).AddTicks(9661),
+                            Id = (byte)9,
+                            CreatedDate = new DateTime(2023, 4, 9, 12, 55, 3, 664, DateTimeKind.Local).AddTicks(7603),
                             IsActive = true,
                             LeaveTypeName = "Taşınma İzni"
                         },
                         new
                         {
-                            Id = (byte)11,
-                            CreatedDate = new DateTime(2023, 4, 2, 4, 42, 41, 540, DateTimeKind.Local).AddTicks(9661),
+                            Id = (byte)10,
+                            CreatedDate = new DateTime(2023, 4, 9, 12, 55, 3, 664, DateTimeKind.Local).AddTicks(7604),
                             IsActive = true,
                             LeaveTypeName = "Devamsızlık"
                         },
                         new
                         {
-                            Id = (byte)12,
-                            CreatedDate = new DateTime(2023, 4, 2, 4, 42, 41, 540, DateTimeKind.Local).AddTicks(9662),
+                            Id = (byte)11,
+                            CreatedDate = new DateTime(2023, 4, 9, 12, 55, 3, 664, DateTimeKind.Local).AddTicks(7604),
                             IsActive = true,
                             LeaveTypeName = "Hizmete Ara Verme"
                         },
                         new
                         {
-                            Id = (byte)13,
-                            CreatedDate = new DateTime(2023, 4, 2, 4, 42, 41, 540, DateTimeKind.Local).AddTicks(9662),
+                            Id = (byte)12,
+                            CreatedDate = new DateTime(2023, 4, 9, 12, 55, 3, 664, DateTimeKind.Local).AddTicks(7605),
                             IsActive = true,
                             LeaveTypeName = "Zorunluluk Hali"
                         },
                         new
                         {
-                            Id = (byte)14,
-                            CreatedDate = new DateTime(2023, 4, 2, 4, 42, 41, 540, DateTimeKind.Local).AddTicks(9663),
+                            Id = (byte)13,
+                            CreatedDate = new DateTime(2023, 4, 9, 12, 55, 3, 664, DateTimeKind.Local).AddTicks(7605),
                             IsActive = true,
                             LeaveTypeName = "Yol İzni"
                         },
                         new
                         {
-                            Id = (byte)15,
-                            CreatedDate = new DateTime(2023, 4, 2, 4, 42, 41, 540, DateTimeKind.Local).AddTicks(9663),
+                            Id = (byte)14,
+                            CreatedDate = new DateTime(2023, 4, 9, 12, 55, 3, 664, DateTimeKind.Local).AddTicks(7606),
                             IsActive = true,
                             LeaveTypeName = "Mesai İzni"
                         },
                         new
                         {
-                            Id = (byte)16,
-                            CreatedDate = new DateTime(2023, 4, 2, 4, 42, 41, 540, DateTimeKind.Local).AddTicks(9664),
+                            Id = (byte)15,
+                            CreatedDate = new DateTime(2023, 4, 9, 12, 55, 3, 664, DateTimeKind.Local).AddTicks(7606),
                             IsActive = true,
                             LeaveTypeName = "İş Aktivitesi"
                         });
-                });
-
-            modelBuilder.Entity("Invo.izin.Yönetim.Sistemi.Domain.Employee.DepartmentOfHeadEntity", b =>
-                {
-                    b.HasOne("Invo.izin.Yönetim.Sistemi.Domain.Employee.DepartmentEntity", "Department")
-                        .WithMany()
-                        .HasForeignKey("DepartmentId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("Invo.izin.Yönetim.Sistemi.Domain.Employee.EmployeeEntity", "Employee")
-                        .WithOne("DepartmentOfHead")
-                        .HasForeignKey("Invo.izin.Yönetim.Sistemi.Domain.Employee.DepartmentOfHeadEntity", "EmployeeId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("Invo.izin.Yönetim.Sistemi.Domain.Parameter.LeavePermissionLevelEntity", "LeavePermissionLevel")
-                        .WithMany()
-                        .HasForeignKey("LeavePermissionLevelId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Department");
-
-                    b.Navigation("Employee");
-
-                    b.Navigation("LeavePermissionLevel");
                 });
 
             modelBuilder.Entity("Invo.izin.Yönetim.Sistemi.Domain.Employee.EmployeeEntity", b =>
@@ -746,19 +682,39 @@ namespace Invo.izin.Yönetim.Sistemi.Persistance.Migrations
                         .WithMany()
                         .HasForeignKey("BranchOfficeId");
 
+                    b.HasOne("Invo.izin.Yönetim.Sistemi.Domain.Employee.DepartmentEntity", "Department")
+                        .WithMany("Employee")
+                        .HasForeignKey("DepartmentId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
                     b.HasOne("Invo.izin.Yönetim.Sistemi.Domain.Parameter.LeavePermissionLevelEntity", "LeavePermissionLevel")
                         .WithMany()
                         .HasForeignKey("LeavePermissionLevelId");
 
+                    b.HasOne("Invo.izin.Yönetim.Sistemi.Domain.Parameter.EmployeeTitleEntity", "Title")
+                        .WithMany("Employees")
+                        .HasForeignKey("TitleId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
                     b.Navigation("BranchOffice");
 
+                    b.Navigation("Department");
+
                     b.Navigation("LeavePermissionLevel");
+
+                    b.Navigation("Title");
                 });
 
-            modelBuilder.Entity("Invo.izin.Yönetim.Sistemi.Domain.Employee.EmployeeEntity", b =>
+            modelBuilder.Entity("Invo.izin.Yönetim.Sistemi.Domain.Employee.DepartmentEntity", b =>
                 {
-                    b.Navigation("DepartmentOfHead")
-                        .IsRequired();
+                    b.Navigation("Employee");
+                });
+
+            modelBuilder.Entity("Invo.izin.Yönetim.Sistemi.Domain.Parameter.EmployeeTitleEntity", b =>
+                {
+                    b.Navigation("Employees");
                 });
 #pragma warning restore 612, 618
         }

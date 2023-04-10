@@ -1,4 +1,4 @@
-using Invo.izin.Yönetim.Sistemi.Web.MVC.Middleware;
+using Invo.izin.YÃ¶netim.Sistemi.Web.MVC.Middleware;
 
 var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddMvcCore();

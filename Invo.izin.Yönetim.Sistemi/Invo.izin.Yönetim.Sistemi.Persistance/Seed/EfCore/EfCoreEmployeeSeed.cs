@@ -20,13 +20,35 @@ namespace Invo.izin.Yönetim.Sistemi.Persistance.Seed.EfCore
         public void Configure(EntityTypeBuilder<EmployeeEntity> builder)
         {
             builder.HasData(
-                       new EmployeeEntity { Id = 1, 
+                       new EmployeeEntity
+                       {
+                           Id = 1,
                            EmployeeName = "Halil",
-                           EmployeeSurName="ŞAHİN",
+                           EmployeeSurName = "ŞAHİN",
+                           UserId = "8e445865-a24d-4543-a6c6-9443d048cdb9",
+                           DepartmentId = 1,
+                           TitleId = 1,
                            BranchOfficeId = 1,
-                           LeavePermissionLevelId=1
-                       }
-                      
+                           IsHead = true,
+                           LeavePermissionLevelId = 1
+
+
+                       },
+                       new EmployeeEntity
+                        {
+                            Id = 2,
+                            EmployeeName = "Ali",
+                            EmployeeSurName = "ŞAHİN",
+                            UserId = "9e224968-33e4-4652-b7b7-8574d048cdb9",
+                            DepartmentId = 2,
+                            TitleId = 2,
+                            BranchOfficeId = 2,
+                            IsHead = false,
+                            LeavePermissionLevelId = 2
+
+
+                        }
+
                        );
         }
 

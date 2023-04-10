@@ -70,6 +70,14 @@ namespace Invo.izin.Yönetim.Sistemi.Persistance.Repositories.EfCore.Base
         {
             return _dbSet.SingleOrDefault(expression);
         }
+
+        public async Task<List<T>> RawSql(FormattableString sqlStr)
+        {
+            return await _dbContext.Set<T>().FromSql(sqlStr).ToListAsync();
+        }
+
+
+
         #endregion
     }
 }

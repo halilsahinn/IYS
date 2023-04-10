@@ -1,5 +1,6 @@
 ﻿#region NAMESPACES
 using Invo.izin.Yönetim.Sistemi.Domain.Employee;
+using Invo.izin.Yönetim.Sistemi.Domain.Parameter;
 using Invo.izin.Yönetim.Sistemi.Persistance.Constant;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
@@ -10,6 +11,7 @@ namespace Invo.izin.Yönetim.Sistemi.Persistance.Configuration.EfCore
 {
     public class EfCoreEmployeeConfiguration : IEntityTypeConfiguration<EmployeeEntity>
     {
+        #region METHODS
         public void Configure(EntityTypeBuilder<EmployeeEntity> builder)
         {
             #region PROPERTIES
@@ -18,10 +20,10 @@ namespace Invo.izin.Yönetim.Sistemi.Persistance.Configuration.EfCore
             builder.Property(p => p.Id).UseIdentityColumn();
             builder.Property(p => p.Id).ValueGeneratedOnAdd();
             builder.Property(p => p.Id).ValueGeneratedOnAdd().HasColumnOrder(1);
+            builder.Property(p => p.Id).HasColumnName("EmployeeId");
 
-
-            builder.Property(p => p.EmployeeName).HasColumnName("EmployeeName").HasColumnOrder(2).IsRequired().HasMaxLength(20).HasColumnOrder(2); ;
-            builder.Property(p => p.EmployeeSurName).HasColumnName("EmployeeSurName").HasColumnOrder(2).IsRequired().HasMaxLength(15).HasColumnOrder(3); ;
+            builder.Property(p => p.EmployeeName).HasColumnName("EmployeeName").HasColumnOrder(2).IsRequired().HasMaxLength(20).HasColumnOrder(2); 
+            builder.Property(p => p.EmployeeSurName).HasColumnName("EmployeeSurName").HasColumnOrder(2).IsRequired().HasMaxLength(15).HasColumnOrder(3); 
 
 
             builder.Property(p => p.CreatedDate).HasColumnName("CreatedDate").HasColumnOrder(4);
@@ -34,6 +36,10 @@ namespace Invo.izin.Yönetim.Sistemi.Persistance.Configuration.EfCore
 
             #region RELATIONS
 
+            builder.HasOne<DepartmentEntity>(c => c.Department).WithMany(a => a.Employee).HasForeignKey(c => c.DepartmentId);
+            builder.HasOne<EmployeeTitleEntity>(c => c.Title).WithMany(a => a.Employees).HasForeignKey(c => c.TitleId);
+          
+
 
 
             #endregion
@@ -44,6 +50,7 @@ namespace Invo.izin.Yönetim.Sistemi.Persistance.Configuration.EfCore
 
             #endregion
         }
+        #endregion
 
     }
 }

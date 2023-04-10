@@ -7,23 +7,24 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="DTOs\" />
     <Folder Include="Enums\" />
-    <Folder Include="Extensions\" />
+    <Folder Include="Feautures\EmployeeTitle\Commands\" />
     <Folder Include="Feautures\LeaveRequest\Commands\Delete\" />
     <Folder Include="Feautures\LeaveRequest\Commands\Update\" />
-    <Folder Include="Profiles\LeaveRequest\" />
-    <Folder Include="Profiles\Employee\" />
-    <Folder Include="ValidationRules\Employee\" />
-    <Folder Include="ValidationRules\LeaveRequest\" />
+    <Folder Include="Feautures\LeaveRequest\Queries\" />
+    <Folder Include="Feautures\User\Queries\" />
     <Folder Include="ValidationRules\Login\" />
   </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="12.0.0" />
     <PackageReference Include="FluentValidation.DependencyInjectionExtensions" Version="11.5.1" />
-    <PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" Version="11.1.0" />
+    <PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" Version="10.0.1" />
+    <PackageReference Include="Microsoft.AspNetCore.Http.Abstractions" Version="2.2.0" />
+    <PackageReference Include="Microsoft.Extensions.Caching.Abstractions" Version="7.0.0" />
     <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="7.0.0" />
+    <PackageReference Include="Swashbuckle.AspNetCore.SwaggerGen" Version="6.5.0" />
+    <PackageReference Include="Swashbuckle.AspNetCore.SwaggerUI" Version="6.5.0" />
   </ItemGroup>
 
   <ItemGroup>

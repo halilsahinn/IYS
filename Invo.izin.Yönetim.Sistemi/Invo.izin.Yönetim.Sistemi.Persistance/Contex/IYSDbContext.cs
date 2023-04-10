@@ -43,7 +43,7 @@ namespace Invo.izin.Yönetim.Sistemi.Persistance.Contex
         #endregion
 
         #region INTERMEDIATE TABLES
-        public DbSet<DepartmentOfHeadEntity> DepartmentsOfHead { get; set; }
+    
         #endregion
 
         #region PARAMETERS
@@ -65,14 +65,10 @@ namespace Invo.izin.Yönetim.Sistemi.Persistance.Contex
         /// <param name="modelBuilder">@modelBuilder</param>
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-
-
             #region MAPPING
-            modelBuilder.ApplyConfiguration(new EfCoreBranchOfficeConfiguration());
             modelBuilder.ApplyConfiguration(new EfCoreDepartmentConfiguration());
-            modelBuilder.ApplyConfiguration(new EfCoreDepartmentOfHeadConfiguration());
-            
-
+            modelBuilder.ApplyConfiguration(new EfCoreBranchOfficeConfiguration());
+         
             modelBuilder.ApplyConfiguration(new EfCoreEmployeeTitleConfiguration());
             modelBuilder.ApplyConfiguration(new EfCoreLeavePermissionLevelConfiguration());
             modelBuilder.ApplyConfiguration(new EfCoreLeaveRequestConfiguration());
@@ -84,14 +80,12 @@ namespace Invo.izin.Yönetim.Sistemi.Persistance.Contex
             #region SEEDS
 
             #region PARAMETER
+            modelBuilder.ApplyConfiguration(new EfCoreDepartmentSeed());
             modelBuilder.ApplyConfiguration(new EfLeaveTypeSeed());
             modelBuilder.ApplyConfiguration(new EfCoreBranchOfficeSeed());
-            
             modelBuilder.ApplyConfiguration(new EfCoreLeavePermissionLevelSeed());
-            modelBuilder.ApplyConfiguration(new EfCoreDepartmentOfHeadSeed());
-
+       
             modelBuilder.ApplyConfiguration(new EfCoreEmployeeTitleSeed());
-            modelBuilder.ApplyConfiguration(new EfCoreDepartmentSeed());
             modelBuilder.ApplyConfiguration(new EfCoreEmployeeSeed());
 
             #endregion

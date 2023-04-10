@@ -20,7 +20,7 @@ namespace Invo.izin.Yönetim.Sistemi.Persistance.Configuration.EfCore
             builder.Property(p => p.Id).ValueGeneratedOnAdd().HasColumnOrder(1);
 
 
-            builder.Property(p => p.Title).HasColumnName("Title").HasColumnOrder(2).IsRequired().HasMaxLength(50);
+            builder.Property(p => p.TitleName).HasColumnName("TitleName").HasColumnOrder(2).IsRequired().HasMaxLength(50);
 
 
             builder.Property(p => p.CreatedDate).HasColumnName("CreatedDate").HasColumnOrder(3);

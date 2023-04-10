@@ -17,6 +17,9 @@ namespace Invo.izin.Yönetim.Sistemi.Application.Contracts.Repositories.Base
         Task<bool> Exists(int id);
         Task Update(T entity);
         Task Delete(T entity);
+
+        Task<List<T>> RawSql(FormattableString sql);
+ 
         #endregion
 
     }

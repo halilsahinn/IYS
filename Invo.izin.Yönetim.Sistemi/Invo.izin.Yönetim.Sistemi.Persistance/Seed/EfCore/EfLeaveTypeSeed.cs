@@ -27,14 +27,14 @@ namespace Invo.izin.Yönetim.Sistemi.Persistance.Seed.EfCore
                        new LeaveTypeEntity { Id = 5, LeaveTypeName = "Evilik İzni"},
                        new LeaveTypeEntity { Id = 6, LeaveTypeName = "Hastalık İzni"},
                        new LeaveTypeEntity { Id = 7, LeaveTypeName = "Askerlik"},
-                       new LeaveTypeEntity { Id = 9, LeaveTypeName = "Ücretsiz İzin" },
-                       new LeaveTypeEntity { Id = 10, LeaveTypeName = "Taşınma İzni" },
-                       new LeaveTypeEntity { Id = 11, LeaveTypeName = "Devamsızlık" },
-                       new LeaveTypeEntity { Id = 12, LeaveTypeName = "Hizmete Ara Verme" },
-                       new LeaveTypeEntity { Id = 13, LeaveTypeName = "Zorunluluk Hali" },
-                       new LeaveTypeEntity { Id = 14, LeaveTypeName = "Yol İzni" },
-                       new LeaveTypeEntity { Id = 15, LeaveTypeName = "Mesai İzni" },
-                       new LeaveTypeEntity { Id = 16, LeaveTypeName = "İş Aktivitesi" }
+                       new LeaveTypeEntity { Id = 8, LeaveTypeName = "Ücretsiz İzin" },
+                       new LeaveTypeEntity { Id = 9, LeaveTypeName = "Taşınma İzni" },
+                       new LeaveTypeEntity { Id = 10, LeaveTypeName = "Devamsızlık" },
+                       new LeaveTypeEntity { Id = 11, LeaveTypeName = "Hizmete Ara Verme" },
+                       new LeaveTypeEntity { Id = 12, LeaveTypeName = "Zorunluluk Hali" },
+                       new LeaveTypeEntity { Id = 13, LeaveTypeName = "Yol İzni" },
+                       new LeaveTypeEntity { Id = 14, LeaveTypeName = "Mesai İzni" },
+                       new LeaveTypeEntity { Id = 15, LeaveTypeName = "İş Aktivitesi" }
 
                        );
         }

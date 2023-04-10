@@ -5,9 +5,11 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace Invo.izin.Yönetim.Sistemi.Web.MVC.Areas.Secure.Controllers
 {
-    
+
     #region ATTRIBUTES
+
     [Area("Secure")]
+
     #endregion
 
     public class Employee : BaseController
@@ -15,15 +17,27 @@ namespace Invo.izin.Yönetim.Sistemi.Web.MVC.Areas.Secure.Controllers
         #region CTOR
         public Employee()
         {
-            
+
         }
         #endregion
 
         #region IACTION RESULTS
+
+        #region INDEX
         public IActionResult Index()
         {
             return View();
         }
+        #endregion
+
+
+        #region CREATE
+        public IActionResult Create()
+        {
+            return View();
+        }
+        #endregion
+
 
         #endregion
     }

@@ -20,12 +20,12 @@ namespace Invo.izin.Yönetim.Sistemi.Persistance.Seed.EfCore
         public void Configure(EntityTypeBuilder<EmployeeTitleEntity> builder)
         {
             builder.HasData(
-                       new EmployeeTitleEntity { Id = 1, Title = "Müdür" },
-                       new EmployeeTitleEntity { Id = 2, Title = "Şef" },
-                       new EmployeeTitleEntity { Id = 3, Title = "Uzman" },
-                       new EmployeeTitleEntity { Id = 4, Title = "Stajyer" },
-                       new EmployeeTitleEntity { Id = 5, Title = "Genel Müdür" },
-                       new EmployeeTitleEntity { Id = 6, Title = "CEO" }
+                       new EmployeeTitleEntity { Id = 1, TitleName = "Müdür" },
+                       new EmployeeTitleEntity { Id = 2, TitleName = "Şef" },
+                       new EmployeeTitleEntity { Id = 3, TitleName = "Uzman" },
+                       new EmployeeTitleEntity { Id = 4, TitleName = "Stajyer" },
+                       new EmployeeTitleEntity { Id = 5, TitleName = "Genel Müdür" },
+                       new EmployeeTitleEntity { Id = 6, TitleName = "CEO" }
 
 
                        );

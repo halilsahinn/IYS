@@ -31,6 +31,12 @@ namespace Invo.izin.Yönetim.Sistemi.Web.MVC.Areas.Secure.Controllers
         {
             return View();
         }
+
+        public IActionResult UserList()
+        {
+            return View();
+
+        }
         #endregion
 
     }
