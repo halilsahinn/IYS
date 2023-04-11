@@ -4,6 +4,7 @@ using Invo.izin.Yönetim.Sistemi.Persistance.Contex;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Invo.izin.Yönetim.Sistemi.Persistance.Migrations
 {
     [DbContext(typeof(IYSDbContext))]
-    partial class IYSDbContextModelSnapshot : ModelSnapshot
+    [Migration("20230411013806_AddStatusColumn")]
+    partial class AddStatusColumn
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

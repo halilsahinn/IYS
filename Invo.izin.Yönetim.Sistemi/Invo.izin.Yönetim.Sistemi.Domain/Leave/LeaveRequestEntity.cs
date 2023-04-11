@@ -7,15 +7,15 @@ namespace Invo.izin.Yönetim.Sistemi.Domain.Leave
     public class LeaveRequestEntity : BaseEntity<int>
     {
         #region CTOR
-        public LeaveRequestEntity(int employeeId, DateTime startedDate, DateTime finishedDate, byte leaveTypeId, decimal leaveTime, bool isApproved)
+        public LeaveRequestEntity(int employeeId, DateTime startedDate, DateTime finishedDate, byte leaveTypeId, decimal leaveTime, string status, bool isApproved)
         {
             EmployeeId = employeeId;
             StartedDate = startedDate;
             FinishedDate = finishedDate;
             LeaveTypeId = leaveTypeId;
             LeaveTime = leaveTime;
+            Status = status;
             IsApproved = isApproved;
-          
         }
 
         #endregion
@@ -26,6 +26,8 @@ namespace Invo.izin.Yönetim.Sistemi.Domain.Leave
         public DateTime FinishedDate { get; set; }
         public byte LeaveTypeId { get; set; }
         public decimal LeaveTime { get; set; }
+
+        public string Status { get; set; }
         public bool IsApproved { get; set; }
       
         #endregion

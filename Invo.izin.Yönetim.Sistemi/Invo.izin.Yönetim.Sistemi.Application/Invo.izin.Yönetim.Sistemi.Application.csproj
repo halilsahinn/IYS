@@ -11,7 +11,6 @@
     <Folder Include="Feautures\EmployeeTitle\Commands\" />
     <Folder Include="Feautures\LeaveRequest\Commands\Delete\" />
     <Folder Include="Feautures\LeaveRequest\Commands\Update\" />
-    <Folder Include="Feautures\LeaveRequest\Queries\" />
     <Folder Include="Feautures\User\Queries\" />
     <Folder Include="ValidationRules\Login\" />
   </ItemGroup>

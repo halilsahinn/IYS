@@ -7,6 +7,7 @@ using Invo.izin.Yönetim.Sistemi.Application.Contracts.Repositories.Parameter;
 using Invo.izin.Yönetim.Sistemi.Application.Contracts.Repositories.User;
 using Invo.izin.Yönetim.Sistemi.Application.Contracts.UnitOfWork;
 using Invo.izin.Yönetim.Sistemi.Persistance.Contex;
+using Invo.izin.Yönetim.Sistemi.Persistance.Repositories;
 using Invo.izin.Yönetim.Sistemi.Persistance.Repositories.Dapper;
 using Invo.izin.Yönetim.Sistemi.Persistance.Repositories.EfCore;
 using Invo.izin.Yönetim.Sistemi.Persistance.Repositories.EfCore.Base;
@@ -41,12 +42,14 @@ namespace Invo.izin.Yönetim.Sistemi.Persistance
             services.AddScoped<ILeaveRequestService, EfLeaveRequestRepository>();
             services.AddScoped<IBranchOfficeService, EfBranchOfficeRepository>();
             services.AddScoped<IEmployeeTitleService, EfEmployeeTitleRepository>();
+            
 
 
             services.AddScoped<IDpUserService, DpUserRepository>();
             services.AddScoped<IDpDepartmentService, DpDepartmentRepository>();
             services.AddScoped<IDpEmployeeTitleService, DpEmployeeTitleRepository>();
             services.AddScoped<IDpBranchOfficeService, DpBranchOfficeRepository>();
+            services.AddScoped<IDpLeaveRequestService, DpLeaveRequestRepository>();
 
 
 

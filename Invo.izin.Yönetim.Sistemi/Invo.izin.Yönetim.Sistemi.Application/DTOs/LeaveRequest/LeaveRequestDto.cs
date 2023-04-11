@@ -5,9 +5,11 @@
         public string EmployeeName { get; set; }
         public DateTime StartedDate { get; set; }
         public DateTime FinishedDate { get; set; }
-        public string LeaveType { get; set; }
-        public decimal LeaveTime { get; set; }
-        public bool IsApproved { get; set; }
+
+        public  decimal LeaveTime { get; set; }
+        public string LeaveTypeName { get; set; }
+        public string Status { get; set; }
+        public string Description { get; set; }
 
     }
 }

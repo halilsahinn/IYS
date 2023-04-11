@@ -1,6 +1,7 @@
 ﻿#region NAMESPACES
 using Invo.izin.Yönetim.Sistemi.Application.DTOs.LeaveRequest;
 using Invo.izin.Yönetim.Sistemi.Application.Feautures.LeaveRequest.Commands.Create;
+using Invo.izin.Yönetim.Sistemi.Application.Feautures.LeaveRequest.Queries;
 using Invo.izin.Yönetim.Sistemi.Application.Responses;
 using Invo.izin.Yönetim.Sistemi.WebAPI.Controllers.Base;
 using MediatR;
@@ -48,9 +49,9 @@ namespace Invo.izin.Yönetim.Sistemi.WebAPI.Controllers
         [HttpGet]
         public async Task<ActionResult<List<LeaveRequestDto>>> Get()
         {
-            //var leaveRequestList = await _mediator.Send(new GetLeaveRequestListQuery());
-            //return Ok(leaveRequestList);
-            return Ok();
+            var leaveRequestList = await _mediator.Send(new GetLeaveRequestListRequest());
+            return Ok(leaveRequestList);
+          
         }
 
 
