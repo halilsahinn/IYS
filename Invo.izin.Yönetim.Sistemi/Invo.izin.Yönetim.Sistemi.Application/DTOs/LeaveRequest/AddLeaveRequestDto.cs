@@ -6,6 +6,7 @@
         public AddLeaveRequestDto()
         {
             IsApproved = false;
+            
         }
         #endregion
 
@@ -16,6 +17,8 @@
         public byte LeaveTypeId { get; set; }
         public decimal LeaveTime { get; set; }
         public bool IsApproved { get; set; }
+
+        public string Status { get; set; }
 
         #endregion
 

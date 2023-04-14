@@ -9,6 +9,8 @@
         public  decimal LeaveTime { get; set; }
         public string LeaveTypeName { get; set; }
         public string Status { get; set; }
+        public bool IsApproved { get; set; }
+        public DateTime CreatedDate { get; set; }
         public string Description { get; set; }
 
     }

@@ -50,6 +50,7 @@ namespace Invo.izin.Yönetim.Sistemi.Persistance
             services.AddScoped<IDpEmployeeTitleService, DpEmployeeTitleRepository>();
             services.AddScoped<IDpBranchOfficeService, DpBranchOfficeRepository>();
             services.AddScoped<IDpLeaveRequestService, DpLeaveRequestRepository>();
+            services.AddScoped<IDpLeaveTypeService, DpLeaveTypeRepository>();
 
 
 

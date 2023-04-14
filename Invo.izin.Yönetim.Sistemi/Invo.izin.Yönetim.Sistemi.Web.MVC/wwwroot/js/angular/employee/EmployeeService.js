@@ -5,6 +5,7 @@ var app = angular.module("EmployeeApp", []);
 
 app.controller("EmployeeController", function ($scope, $http) {
 
+    $scope.btntext = 'Kaydet';
     $scope.employees = [];
     $scope.departments = [];
     $scope.employeeTitle = [];
@@ -92,7 +93,7 @@ app.controller("EmployeeController", function ($scope, $http) {
  
 
 
-    $scope.btntext = "Kaydet";
+   
 
     $scope.SaveEmployee = function () {
 

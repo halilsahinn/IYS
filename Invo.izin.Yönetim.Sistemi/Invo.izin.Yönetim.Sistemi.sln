@@ -29,7 +29,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Invo.izin.Yönetim.Sistemi.
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Invo.izin.Yönetim.Sistemi.Helper", "Invo.izin.Yönetim.Sistemi.Helper\Invo.izin.Yönetim.Sistemi.Helper.csproj", "{18CE0332-C03D-49CE-9270-ED413CD6BDC5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Invo.izin.Yönetim.Sistemi.Messages", "Invo.izin.Yönetim.Sistemi.Messages\Invo.izin.Yönetim.Sistemi.Messages.csproj", "{088C8FEC-F076-4088-9046-4F6E02F68D31}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Invo.izin.Yönetim.Sistemi.Messages", "Invo.izin.Yönetim.Sistemi.Messages\Invo.izin.Yönetim.Sistemi.Messages.csproj", "{088C8FEC-F076-4088-9046-4F6E02F68D31}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

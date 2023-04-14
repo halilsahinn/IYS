@@ -20,12 +20,15 @@ namespace Invo.izin.Yönetim.Sistemi.Persistance.Repositories
 E.EmployeeName,
 Lr.StartedDate,
 Lr.FinishedDate,
+
 (DATEDIFF(Day,Lr.StartedDate,Lr.FinishedDate)) As LeaveTime,
 Lt.LeaveTypeName,
 CASE 
 WHEN Lr.IsApproved= 1 THEN 'Onaylandı'
 WHEN Lr.IsApproved = 0 THEN 'Onaylanlanmadı'
 End As [Status],
+Lr.CreatedDate,
+Lr.IsApproved,
 Lr.Description
 FROM  [Hr].[ LeaveRequest] As Lr
 INNER JOIN Hr.LeaveType As Lt ON  Lt.Id=Lr.LeaveTypeId

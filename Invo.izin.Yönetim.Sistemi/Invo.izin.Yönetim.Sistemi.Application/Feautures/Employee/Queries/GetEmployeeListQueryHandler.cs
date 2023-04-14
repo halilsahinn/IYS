@@ -49,7 +49,7 @@ namespace Invo.izin.Yönetim.Sistemi.Application.Feautures.Employee.Queries
                 return cacheData;
             }
 
-            var expirationTime = DateTimeOffset.Now.AddMinutes(5.0);
+            var expirationTime = DateTimeOffset.Now.AddMinutes(0.5);
            
             var employeeList = await _employeeRepository.GetEmployeeWithParameters();
 

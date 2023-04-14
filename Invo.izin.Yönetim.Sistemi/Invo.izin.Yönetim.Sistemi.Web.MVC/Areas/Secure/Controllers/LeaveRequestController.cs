@@ -1,44 +1,41 @@
 ﻿#region NAMESPACES
-using Invo.izin.Yönetim.Sistemi.Web.MVC.Areas.Secure.Controllers.Base;
 using Microsoft.AspNetCore.Mvc;
 #endregion
 
 namespace Invo.izin.Yönetim.Sistemi.Web.MVC.Areas.Secure.Controllers
 {
-
     #region ATTRIBUTES
-
     [Area("Secure")]
 
     #endregion
 
-    public class Employee : BaseController
+    public class LeaveRequestController : Controller
     {
         #region CTOR
-        public Employee()
+        public LeaveRequestController()
         {
 
         }
+
         #endregion
 
         #region IACTION RESULTS
 
+        public IActionResult Create()
+        {
+
+            return View();
+        }
+
         #region INDEX
+
+        #endregion
         public IActionResult Index()
         {
             return View();
         }
-        #endregion
-
-
-        #region CREATE
-        public IActionResult Create()
-        {
-            return View();
-        }
-        #endregion
-
 
         #endregion
+
     }
 }

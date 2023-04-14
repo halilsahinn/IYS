@@ -6,7 +6,7 @@
     <div class="container-fluid">
         <div class="row mb-2">
             <div class="col-sm-6">
-                <h1 class="m-0">Çalışan Yönetimi</h1>
+                <h1 class="m-0">İzin  Yönetimi</h1>
             </div><!-- /.col -->
             <div class="col-sm-6">
                 <ol class="breadcrumb float-sm-right">
@@ -14,70 +14,72 @@
                     <li class="breadcrumb-item"><a href="#"><i class="fas fa-home"></i> </a></li>
                     <li class="breadcrumb-item"><a href="#"><i class="fas fa-tasks"></i> </a></li>
             </div><!-- /.col -->
-    </div><!-- /.c
+        </div>
+        <!-- /.c
         </div><!-- /.row -->
-</div>
+    </div>
 
-  
- 
+
+
     <div class="card-header" style="background-color:#6c757d">
 
-        <a class="btn btn-primary float-left" href="/Secure/Employee/Create"><i class="fas fa-plus"></i> Çalışan Ekle</a>
+     
 
     </div>
-    <div class="card-body" ng-app="EmployeeApp" ng-controller="EmployeeController" ng-init="GetEmployeeList()">
- 
-        <table class="table table-bordered table-striped" style="width:100%" >
+    <div class="card-body" ng-app="LeaveRequestApp" ng-controller="LeaveRequestController">
+
+        <table class="table table-bordered table-striped" style="width:100%">
             <thead>
-            <tr>
-          
-                <th>Ad</th>
+                <tr>
 
-                <th>Soyad</th>
+                    <th>Çalışan Adı</th>
 
-                <th>Departman</th>
+                    <th>Başlangıç Tarihi</th>
 
-                <th>Ünvan</th>
+                    <th>Bitiş Tarihi</th>
+                    <th>İzin Tipi</th>
 
-                <th>Pozisyon</th>
+                    <th>Durum</th>
+                    
+                    <th>Oluşturulma Tarihi</th>
 
-                <th>Şube</th>
-
-                <th>Eklenme Tarihi</th>
-          
-
-            </tr>
+                </tr>
             </thead>
             <tbody>
-                <tr ng-repeat="e in employees">
+                <tr ng-repeat="e in leaveRequestList">
 
-                  
+
 
                     <td>{{ e.employeeName }}</td>
 
-                    <td>{{ e.employeeSurName }}</td>
+                    <td>{{ e.startedDate | date:'d-M-yyyy, h:mm'}}</td>
 
-                    <td>{{ e.departmentName }}</td>
+                    <td>{{ e.finishedDate| date:'d-M-yyyy, h:mm' }}</td>
+                    <td>{{e.leaveTypeName}}</td>
 
                     <td>
-                        {{e.isHead ? 'Yönetici' : 'Çalışan'}}
+ 
+                        <div *ng-if="e.isApprove ==true">
+                            <a class="btn btn-primary" ng-clik="ChangeApproved(e.Id)">Onayla</a>
+                        </div>
+                        <div *ng-if="e.isApprove === false">
+                            <a class="btn btn-primary" ng-clik="ChangeApproved(e.Id)">Onayı Kaldır</a>
+                        </div>
+
                         
                         
 
-                    <td>{{ e.title }}</td>
-
-                    <td>{{ e.branchOfficeName }}</td>
 
                     <td>{{ e.createdDate | date:'d-M-yyyy, h:mm'}}</td>
 
-              
 
-            </tr>
+
+                </tr>
             </tbody>
         </table>
-        
-        
-    
+
+
+
 
     </div>
 
@@ -90,8 +92,8 @@
 
     <script src="~/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
 
- 
- 
+
+
 
 
 }
