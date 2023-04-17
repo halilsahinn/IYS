@@ -31,6 +31,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Invo.izin.Yönetim.Sistemi.
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Invo.izin.Yönetim.Sistemi.Messages", "Invo.izin.Yönetim.Sistemi.Messages\Invo.izin.Yönetim.Sistemi.Messages.csproj", "{088C8FEC-F076-4088-9046-4F6E02F68D31}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Invo.izin.Yönetim.Sistemi.Mailing", "Invo.izin.Yönetim.Sistemi.Mailing\Invo.izin.Yönetim.Sistemi.Mailing.csproj", "{61263CCD-D793-4617-ADBB-83B827997E2B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -77,6 +79,10 @@ Global
 		{088C8FEC-F076-4088-9046-4F6E02F68D31}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{088C8FEC-F076-4088-9046-4F6E02F68D31}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{088C8FEC-F076-4088-9046-4F6E02F68D31}.Release|Any CPU.Build.0 = Release|Any CPU
+		{61263CCD-D793-4617-ADBB-83B827997E2B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{61263CCD-D793-4617-ADBB-83B827997E2B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{61263CCD-D793-4617-ADBB-83B827997E2B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{61263CCD-D793-4617-ADBB-83B827997E2B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -95,6 +101,7 @@ Global
 		{FB0A7C41-46B2-4483-9C1D-AFF6F05CBE20} = {D1F0453A-6B64-48B2-B217-F3B4F37FFD0D}
 		{18CE0332-C03D-49CE-9270-ED413CD6BDC5} = {9473CF7C-6A4A-49BB-A1D2-B50767D6A877}
 		{088C8FEC-F076-4088-9046-4F6E02F68D31} = {9473CF7C-6A4A-49BB-A1D2-B50767D6A877}
+		{61263CCD-D793-4617-ADBB-83B827997E2B} = {9473CF7C-6A4A-49BB-A1D2-B50767D6A877}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {842643C5-F815-4C4F-A175-D53130531D06}

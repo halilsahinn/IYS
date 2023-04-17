@@ -1,6 +1,8 @@
 ﻿#region NAMESPACES
 using Invo.izin.Yönetim.Sistemi.Application.Exceptions;
+using Microsoft.AspNetCore.Mvc.ModelBinding;
 using Newtonsoft.Json;
+using System;
 using System.Net;
 
 #endregion
@@ -11,12 +13,18 @@ namespace Invo.izin.Yönetim.Sistemi.WebAPI.Middleware
     {
         #region FFIELDS
         private readonly RequestDelegate _next;
+        private readonly IHostEnvironment _environment;
+        private readonly IModelMetadataProvider _metadataProvider;
+        private readonly ILogger _logger;
         #endregion
 
         #region METHODS
-        public ExceptionMiddleware(RequestDelegate next)
+        public ExceptionMiddleware(RequestDelegate next, IHostEnvironment environment, ILogger<ExceptionMiddleware> logger)
         {
             _next = next;
+            _environment = environment;
+     
+            _logger = logger;
         }
         public async Task InvokeAsync(HttpContext httpContext)
         {
@@ -36,13 +44,14 @@ namespace Invo.izin.Yönetim.Sistemi.WebAPI.Middleware
             string result = JsonConvert.SerializeObject(new ErrorDeatils
             {
                 ErrorMessage = exception.Message,
-                ErrorType = "Failure"
+                ErrorType = "Hata"
             });
 
             switch (exception)
             {
                 case BadRequestException badRequestException:
                     statusCode = HttpStatusCode.BadRequest;
+                   
                     break;
                 case ValidationException validationException:
                     statusCode = HttpStatusCode.BadRequest;
@@ -56,6 +65,7 @@ namespace Invo.izin.Yönetim.Sistemi.WebAPI.Middleware
             }
 
             context.Response.StatusCode = (int)statusCode;
+            _logger.LogError(result);
             return context.Response.WriteAsync(result);
         }
         #endregion

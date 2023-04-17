@@ -12,6 +12,7 @@ namespace Invo.izin.Yönetim.Sistemi.Application.Profiles.LeaveRequest
         public LeaveRequestProfile()
         {
             CreateMap<LeaveRequestEntity, AddLeaveRequestDto>().ReverseMap();
+       
         }
 
     }

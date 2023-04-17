@@ -8,15 +8,9 @@
             <div class="col-sm-6">
                 <h1 class="m-0">İzin  Yönetimi</h1>
             </div><!-- /.col -->
-            <div class="col-sm-6">
-                <ol class="breadcrumb float-sm-right">
-
-                    <li class="breadcrumb-item"><a href="#"><i class="fas fa-home"></i> </a></li>
-                    <li class="breadcrumb-item"><a href="#"><i class="fas fa-tasks"></i> </a></li>
-            </div><!-- /.col -->
+ 
         </div>
-        <!-- /.c
-        </div><!-- /.row -->
+ 
     </div>
 
 
@@ -42,6 +36,7 @@
                     <th>Durum</th>
                     
                     <th>Oluşturulma Tarihi</th>
+                    <th>Açıklama</th>
 
                 </tr>
             </thead>
@@ -59,20 +54,16 @@
 
                     <td>
  
-                        <div *ng-if="e.isApprove ==true">
-                            <a class="btn btn-primary" ng-clik="ChangeApproved(e.Id)">Onayla</a>
+                        <div ng-if="e.isApproved ==true">
+                            <a class="btn btn-primary" ng-clik="ChangeApproved(e.Id)">Onayla <i class="fa-solid fa-thumbs-up"></i></a>
                         </div>
-                        <div *ng-if="e.isApprove === false">
+                        <div ng-if="e.isApproved == false">
                             <a class="btn btn-primary" ng-clik="ChangeApproved(e.Id)">Onayı Kaldır</a>
                         </div>
 
-                        
-                        
-
-
                     <td>{{ e.createdDate | date:'d-M-yyyy, h:mm'}}</td>
 
-
+                    <td>{{ e.description }}</td>
 
                 </tr>
             </tbody>

@@ -80,6 +80,38 @@ app.controller("LeaveRequestController", function ($scope, $http) {
     })
 
 
+    $scope.ChangeApproved = function (id){
+
+
+        $scope.btntext = "Lütfen Bekleyiniz...!";
+
+
+        $http({
+
+            method: 'POST',
+
+            url: 'https://localhost:7241/api/LeaveRequest',
+
+            data: JSON.stringify($scope.leaveRequest),
+
+        }).then(function (response) {
+
+            $scope.btntext = "Kaydet";
+
+            $scope.leaveRequest = null;
+
+            console.log(response);
+
+            alert('Kayıt Başarılı...!');
+
+        }, function (error) {
+
+            alert('Hata');
+
+        });
+
+    }
+
 });
 
 

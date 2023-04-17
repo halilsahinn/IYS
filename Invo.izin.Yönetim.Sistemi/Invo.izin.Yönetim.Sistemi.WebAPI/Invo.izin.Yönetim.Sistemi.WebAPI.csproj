@@ -21,6 +21,7 @@
     <ProjectReference Include="..\Invo.izin.Yönetim.Sistemi.Application\Invo.izin.Yönetim.Sistemi.Application.csproj" />
     <ProjectReference Include="..\Invo.izin.Yönetim.Sistemi.Caching\Invo.izin.Yönetim.Sistemi.Caching.csproj" />
     <ProjectReference Include="..\Invo.izin.Yönetim.Sistemi.Identity\Invo.izin.Yönetim.Sistemi.Identity.csproj" />
+    <ProjectReference Include="..\Invo.izin.Yönetim.Sistemi.Logging\Invo.izin.Yönetim.Sistemi.Logging.csproj" />
     <ProjectReference Include="..\Invo.izin.Yönetim.Sistemi.Persistance\Invo.izin.Yönetim.Sistemi.Persistance.csproj" />
   </ItemGroup>
 

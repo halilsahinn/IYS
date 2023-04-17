@@ -6,6 +6,7 @@ using Invo.izin.Yönetim.Sistemi.Domain.Employee;
 using Invo.izin.Yönetim.Sistemi.Domain.Parameter;
 using Invo.izin.Yönetim.Sistemi.Persistance.Configuration.EfCore;
 using Invo.izin.Yönetim.Sistemi.Persistance.Seed.EfCore;
+using Invo.izin.Yönetim.Sistemi.Domain.Leave;
 
 #endregion
 
@@ -40,10 +41,12 @@ namespace Invo.izin.Yönetim.Sistemi.Persistance.Contex
         public DbSet<DepartmentEntity> Departments { get; set; }
         public DbSet<EmployeeEntity> Employees { get; set; }
 
+        public DbSet<LeaveRequestEntity> LeaveRequests { get; set; }
+
         #endregion
 
         #region INTERMEDIATE TABLES
-    
+
         #endregion
 
         #region PARAMETERS

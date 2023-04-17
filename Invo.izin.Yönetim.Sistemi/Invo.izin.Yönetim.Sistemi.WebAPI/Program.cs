@@ -1,12 +1,12 @@
 #region NAMESPACES
-using Invo.izin.Yönetim.Sistemi.Persistance;
-using Invo.izin.Yönetim.Sistemi.Caching;
-using Invo.izin.Yönetim.Sistemi.Identity;
-using Invo.izin.Yönetim.Sistemi.WebAPI.Middleware;
 using FluentValidation;
+using Invo.izin.Yönetim.Sistemi.Application;
 using Invo.izin.Yönetim.Sistemi.Application.DTOs.Department;
 using Invo.izin.Yönetim.Sistemi.Application.ValidationRules.Department;
-using Invo.izin.Yönetim.Sistemi.Application;
+using Invo.izin.Yönetim.Sistemi.Caching;
+using Invo.izin.Yönetim.Sistemi.Identity;
+using Invo.izin.Yönetim.Sistemi.Persistance;
+using Invo.izin.Yönetim.Sistemi.WebAPI.Middleware;
 #endregion
 
 
@@ -23,7 +23,7 @@ builder.Services.AddHttpContextAccessor();
 
 #region CORS
 
-builder.Services.AddCors(p =>p.AddPolicy("corsPolicy",build =>
+builder.Services.AddCors(p => p.AddPolicy("corsPolicy", build =>
     {
         build.WithOrigins("*").AllowAnyMethod().AllowAnyHeader();
     }
@@ -57,14 +57,14 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseSwagger();
- 
+
 
 app.UseMiddleware<ExceptionMiddleware>();
 
 app.UseHttpsRedirection();
 
 
- 
+
 #region USE CORS
 app.UseCors("corsPolicy");
 #endregion

@@ -14,13 +14,13 @@ namespace Invo.izin.Yönetim.Sistemi.Application.Feautures.LeaveRequest.Queries
 {
 
     #region QUERY
-    public class GetLeaveRequestListRequest : IRequest<List<LeaveRequestDto>>
+    public record GetLeaveRequestListRequest : IRequest<List<LeaveRequestDto>>
     {
     }
     #endregion
 
     #region HANDLER
-    public class GetLeaveRequestListQueryHandler : BaseHandler, IRequestHandler<GetLeaveRequestListRequest, List<LeaveRequestDto>>
+    public sealed class GetLeaveRequestListQueryHandler : BaseHandler, IRequestHandler<GetLeaveRequestListRequest, List<LeaveRequestDto>>
     {
         #region FILEDS
         private readonly IDpLeaveRequestService _leaveRequestRepository;
