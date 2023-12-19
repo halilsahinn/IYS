@@ -4,11 +4,10 @@ using Microsoft.AspNetCore.Mvc;
 #endregion
 
 namespace Invo.izin.Yönetim.Sistemi.Web.MVC.Areas.Secure.Controllers
-{
-
+{ 
     #region ATTRIBUTES
+   
 
-    [Area("Secure")]
 
     #endregion
 

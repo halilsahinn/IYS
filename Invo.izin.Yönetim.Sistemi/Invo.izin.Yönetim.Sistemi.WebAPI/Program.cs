@@ -6,6 +6,7 @@ using Invo.izin.Yönetim.Sistemi.Application.ValidationRules.Department;
 using Invo.izin.Yönetim.Sistemi.Caching;
 using Invo.izin.Yönetim.Sistemi.Identity;
 using Invo.izin.Yönetim.Sistemi.Persistance;
+using Invo.izin.Yönetim.Sistemi.WebAPI.Filters;
 using Invo.izin.Yönetim.Sistemi.WebAPI.Middleware;
 #endregion
 
@@ -32,6 +33,8 @@ builder.Services.AddCors(p => p.AddPolicy("corsPolicy", build =>
 
 
 #endregion
+
+builder.Services.AddScoped<ValidationFilterAttribute>();
 
 
 #region Service Registratition

@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace Invo.izin.Yönetim.Sistemi.Web.MVC.Areas.Secure.Controllers.Base
 {
+    [Area("secure")]
     public class BaseController : Controller
     {
         #region FIELDS

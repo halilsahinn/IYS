@@ -1,12 +1,13 @@
 ﻿#region NAMESPACES
+using Invo.izin.Yönetim.Sistemi.Web.MVC.Areas.Secure.Controllers.Base;
 using Microsoft.AspNetCore.Mvc;
+using System.Drawing;
 
 #endregion
 
 namespace Invo.izin.Yönetim.Sistemi.Web.MVC.Areas.Secure.Controllers
-{
-    [Area("Secure")]
-    public class HomeController : Controller
+{ 
+    public class HomeController : BaseController
     {
         #region CTOR
         public HomeController()
@@ -14,7 +15,7 @@ namespace Invo.izin.Yönetim.Sistemi.Web.MVC.Areas.Secure.Controllers
 
         }
         #endregion
-
+        
         #region IACTION RESULTS
         public IActionResult Index()
         {

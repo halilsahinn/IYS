@@ -29,6 +29,7 @@
             public const string NAME = "IYS_DB";
             public const string USER_NAME = "";
             public const string PASSWORD = "";
+            //public const string CONNECTION_STRING = $@"Server={MACHINE_NAME};Database={NAME};User Id={USER_NAME};Password={PASSWORD};Trusted_Connection=True;Connect Timeout = 30; MultipleActiveResultSets=True;TrustServerCertificate=True";
             public const string CONNECTION_STRING = $@"Server={MACHINE_NAME};Database={NAME};Trusted_Connection=True;Connect Timeout = 30; MultipleActiveResultSets=True;TrustServerCertificate=True";
             public const int    DB_PORT = 1433;
             public const string DEFAULT_SCHEMA = "dbo";

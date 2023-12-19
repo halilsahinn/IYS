@@ -2,9 +2,9 @@ using Invo.izin.Yönetim.Sistemi.Web.MVC.Middleware;
 
 var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddMvcCore();
-builder.Services.AddRazorPages();
+//builder.Services.AddRazorPages();
 // Add services to the container.
-builder.Services.AddControllersWithViews();
+builder.Services.AddControllersWithViews().AddRazorRuntimeCompilation(); 
 
 var app = builder.Build();
 
@@ -37,14 +37,16 @@ app.Use(async (context, next) =>
     }
 });
 
+ 
+ 
 app.UseEndpoints(endpoints =>
 {
 
 
     endpoints.MapAreaControllerRoute(
-        name: "Secure",
-        areaName: "Secure",
-        pattern: "{areas=Secure}/{controller=Home}/{action=Index}/{id?}"
+        name: "secure",
+        areaName: "secure",
+        pattern: "{areas=secure}/{controller=Home}/{action=Index}/{id?}"
     );
 
     endpoints.MapDefaultControllerRoute();

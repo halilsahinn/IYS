@@ -5,6 +5,7 @@ using Invo.izin.Yönetim.Sistemi.Application.Feautures.Employee.Commands.Create;
 using Invo.izin.Yönetim.Sistemi.Application.Feautures.Employee.Queries;
 using Invo.izin.Yönetim.Sistemi.Application.Responses;
 using Invo.izin.Yönetim.Sistemi.WebAPI.Controllers.Base;
+using Invo.izin.Yönetim.Sistemi.WebAPI.Filters;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 #endregion
@@ -35,6 +36,7 @@ namespace Invo.izin.Yönetim.Sistemi.WebAPI.Controllers
 
         #region CREATE
         // POST api/<EmployeeController>
+        [ServiceFilter(typeof(ValidationFilterAttribute))]
         [HttpPost]
         [ProducesResponseType(200)]
         [ProducesResponseType(400)]
